@@ -1,0 +1,23 @@
+<h2>Welcome, <span id="username"></span></h2>
+<p>Email: <span id="user-email"></span></p>
+<button id="logout">Logout</button>
+
+<script>
+    import { getAuth, signOut } from 'firebase/auth';
+
+    const auth = getAuth();
+    const user = auth.currentUser;
+
+    if (user) {
+        document.getElementById('username').textContent = user.displayName || "User";
+        document.getElementById('user-email').textContent = user.email;
+    }
+
+    document.getElementById('logout').addEventListener('click', function() {
+        signOut(auth).then(() => {
+            window.location.href = 'login.html'; // Redirect to login page
+        }).catch((error) => {
+            console.error(error.message);
+        });
+    });
+</script>
