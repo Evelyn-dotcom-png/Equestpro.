@@ -1,0 +1,11 @@
+<!-- search.html -->
+<h2>Advanced Search</h2>
+<form id="search-form">
+    <input type="text" id="breed" placeholder="Breed">
+    <input type="number" id="min-price" placeholder="Min Price">
+    <input type="number" id="max-price" placeholder="Max Price">
+    <input type="text" id="location" placeholder="Location">
+    <button type="submit">Search</button>
+</form>
+
+<div id="search-results"></div>
