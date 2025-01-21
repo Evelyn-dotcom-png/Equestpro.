@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EQuestpro Marketplace</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>EQuestpro</h1>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for horses, equipment, etc.">
+      <button onclick="searchProducts()">Search</button>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Login</a>
+      <a href="#">Register</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="product-list">
+      <div class="product-card" id="product1">
+        <img src="horse.jpg" alt="Horse">
+        <h3>Beautiful Pinto Horse</h3>
+        <p>Price: $5,000</p>
+        <button>View Details</button>
+      </div>
+      <div class="product-card" id="product2">
+        <img src="saddle.jpg" alt="Saddle">
+        <h3>Leather Saddle</h3>
+        <p>Price: $300</p>
+        <button>View Details</button>
+      </div>
+      <!-- Additional product cards can go here -->
+    </section>
+
+    <section id="login-form">
+      <h2>Login</h2>
+      <form onsubmit="loginUser(event)">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <button type="submit">Login</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EQuestpro. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
